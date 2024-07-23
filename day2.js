@@ -1,8 +1,8 @@
 // Add two number and log the result
 let a = 30;
 let b = 20;
-const sum = a+b;
-console.log("sum:", sum)
+const add = a+b;
+console.log("sum:", add)
 
 // Subtract two number and log the result
 const sub = a-b;
@@ -50,3 +50,21 @@ console.log(num3 <= num4);
 console.log(num1 == num2); //Equality
 
 console.log(num3 === num4); //Strict Equality
+
+// Use the && operator to combine two number and console log the result
+console.log(num1 < 11 && num2 < 10); // returns true if both operands are true other wise false
+
+// Use the || operator to combine two number and console log the result
+const u = true;
+const v = false;
+console.log(u || v); // always output true if at least one of the operands is true
+
+// Use the || operator to combine two number and console log the result
+const isRaining = false;
+console.log(!isRaining); //reverses the boolean value of an operand
+
+// Use the ternary operator to check the number is positive or negative and console log the result
+const number = 42;
+const result = number >= 0 ? "Positive" : "Negative";
+
+console.log(result); //number is greater than or equal to 0, the expression after ? (which is "Positive") is assigned to result. Otherwise, the expression after : (which is "Negative") is assigned to result
