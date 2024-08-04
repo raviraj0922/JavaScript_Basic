@@ -45,3 +45,34 @@ const personName = "Ravi";
 const personAge = 30;
 console.log(greetPerson(personName, personAge)); 
 console.log(greetPerson("Gunjan"));
+
+// write a higer order function that takes a function and number, and call the function that many times
+function repeatFunction(fn, times) {
+    for (let i = 0; i < times; i++) {
+      fn(); // Call the provided function
+    }
+  }
+ // Example usage:
+  function greet() {
+    console.log("Hello, Namaste!");
+  }  
+  repeatFunction(greet, 5);
+
+//   write HOF that takes two function and a value, applies the first funtion to the value and then applies the second function to the result
+function composeFunctions(fn1, fn2, inputValue) {
+    const intermediateResult = fn1(inputValue);
+    const finalResult = fn2(intermediateResult);
+    return finalResult;
+  }
+    // Example usage:
+  function double(x) {
+    return x * 2;
+  }
+  
+  function addFive(x) {
+    return x + 5;
+  }
+  
+  const input = 10;
+  const result = composeFunctions(double, addFive, input);
+  console.log("Result:", result); // Should print 25 (10 * 2 + 5)
