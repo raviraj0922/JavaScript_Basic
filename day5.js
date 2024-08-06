@@ -66,13 +66,13 @@ function composeFunctions(fn1, fn2, inputValue) {
   }
     // Example usage:
   function double(x) {
-    return x * 2;
+    return x * 2; //Takes number x and returns x multiplied by 2
   }
   
   function addFive(x) {
-    return x + 5;
+    return x + 5; //Takes number x and returns x plus 5
   }
   
   const input = 10;
-  const result = composeFunctions(double, addFive, input);
+  const result = composeFunctions(double, addFive, input); //first call input then double and addFive
   console.log("Result:", result); // Should print 25 (10 * 2 + 5)
